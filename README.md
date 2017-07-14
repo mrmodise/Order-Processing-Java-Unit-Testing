@@ -1,8 +1,12 @@
 ### Order Processing - Java-Unit-Testing
-A project to demonstrate unit testing in a Java project
+A project to demonstrate unit testing in a Java project. 
 
 ### Setup 
+Download Maven at 
+https://maven.apache.org/download.cgi. Add the ``apache-maven-3.5.0/bin`` to the Windows System environment PATH. For Ubuntu, ``sudo apt-get install maven``. Ensure Java 8 is installed.
 
+Then:
+- ``mvn package`` to install dependencies.
 
 ### License
 ```
