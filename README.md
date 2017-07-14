@@ -6,7 +6,8 @@ Download Maven at
 https://maven.apache.org/download.cgi. Add the ``apache-maven-3.5.0/bin`` to the Windows System environment PATH. For Ubuntu, ``sudo apt-get install maven``. Ensure Java 8 is installed.
 
 Then:
-- ``mvn package`` to install dependencies.
+- ``mvn package`` take the compiled code and package it in its distributable format, such as a JAR.
+- ``mvn test``  test the compiled source code using a JUnit testing framework.
 
 ### License
 ```
