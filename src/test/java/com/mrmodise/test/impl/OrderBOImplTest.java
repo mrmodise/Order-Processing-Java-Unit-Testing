@@ -119,6 +119,11 @@ public class OrderBOImplTest {
         verify(orderDAO).deleteOrder(123);
     }
 
-
-
+    @Test(expected = BOException.class)
+    public void deleteOrder_Should_Throw_SQLException() throws SQLException, BOException {
+        // setup expectation to throw BO exception
+        when(orderDAO.deleteOrder(123)).thenThrow(SQLException.class);
+        // place an order
+        orderBO.deleteOrder(123);
+    }
 }
