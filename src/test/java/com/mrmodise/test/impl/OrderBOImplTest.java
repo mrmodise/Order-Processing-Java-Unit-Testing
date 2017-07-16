@@ -99,5 +99,26 @@ public class OrderBOImplTest {
         orderBO.cancelOrder(123);
     }
 
+    @Test
+    public void deleteOrder_Should_Delete_An_Order() throws SQLException, BOException {
+        // setup expectation
+        when(orderDAO.deleteOrder(123)).thenReturn(new Integer(1));
+        boolean result = orderBO.deleteOrder(123);
+        // verify the results
+        assertTrue(result);
+        verify(orderDAO).deleteOrder(123);
+    }
+
+    @Test
+    public void deleteOrder_Should_Not_Delete_An_Order() throws SQLException, BOException {
+        // setup expectation
+        when(orderDAO.deleteOrder(123)).thenReturn(new Integer(0));
+        boolean result = orderBO.deleteOrder(123);
+        // verify the results
+        assertFalse(result);
+        verify(orderDAO).deleteOrder(123);
+    }
+
+
 
 }
