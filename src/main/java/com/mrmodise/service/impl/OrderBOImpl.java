@@ -14,6 +14,12 @@ public class OrderBOImpl implements OrderBO {
 
     OrderDAO orderDAO;
 
+    /**
+     * Handles the placing of an order
+     * @param order
+     * @return
+     * @throws BOException
+     */
     public boolean placeOrder(Order order) throws BOException {
         try {
             int result = orderDAO.createOrder(order);
@@ -27,6 +33,12 @@ public class OrderBOImpl implements OrderBO {
         return true;
     }
 
+    /**
+     * Handles the cancellation of an order
+     * @param orderID
+     * @return
+     * @throws BOException
+     */
     public boolean cancelOrder(int orderID) throws BOException {
         try {
             Order order = orderDAO.readOrder(orderID);
@@ -42,6 +54,12 @@ public class OrderBOImpl implements OrderBO {
         return true;
     }
 
+    /**
+     * Handles the deletion of an order
+     * @param orderID
+     * @return
+     * @throws BOException
+     */
     public boolean deleteOrder(int orderID) throws BOException {
         try {
             int result = orderDAO.deleteOrder(orderID);
@@ -55,10 +73,18 @@ public class OrderBOImpl implements OrderBO {
         return true;
     }
 
+    /**
+     * Injecting the orderDAO getter
+     * @return
+     */
     public OrderDAO getOrderDAO() {
         return orderDAO;
     }
 
+    /**
+     * Injecting the orderDAO setter
+     * @param orderDAO
+     */
     public void setOrderDAO(OrderDAO orderDAO) {
         this.orderDAO = orderDAO;
     }

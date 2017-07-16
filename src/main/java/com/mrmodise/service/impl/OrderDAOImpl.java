@@ -7,6 +7,9 @@ import java.sql.SQLException;
 
 /**
  * Created by mrmodise on 2017/07/13.
+ * @class OrderDAOImpl
+ * @author mrmodise
+ *
  */
 public class OrderDAOImpl implements OrderDAO {
 

@@ -2,6 +2,9 @@ package com.mrmodise.domain;
 
 /**
  * Created by mrmodise on 2017/07/13.
+ * @Class Order
+ * @author mrmodise
+ * Defines the order properties
  */
 public class Order {
     private int id;
